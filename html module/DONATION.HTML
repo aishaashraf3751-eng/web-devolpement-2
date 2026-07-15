@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DONATION FORM</h1>
+    <p>Fill in the form below to make a donation</p>
+
+    <form>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label>Person ID</label><br>
+            <input type="text" id="pid" placeholder="Your Name"><br>
+
+            <label>DOB</label><br>
+            <input type="date" id="dob"><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>DONATION PLACE</legend>
+            <select id="place">
+                <option value="">Select a location</option>
+                <option value="hospital">Hospital</option>
+                <option value="clinic">Clinic</option>
+                <option value="charity">Charity</option>
+            </select><br>
+
+            <label>HOW WILL YOU DONATE THE MONEY</label><BR>
+            <input type="radio" name="reason" value="BY CARD">CARD<br>
+            <input type="radio" name="reason" value="BY CASH">CASH<br>
+
+            <label>any questions about the donation process</label><br>
+            <textarea id="QUESTIONS" rows="3" cols="35" placeholder="e.g., at which time do i come to the location?"></textarea><br>
+                
+        </fieldset>
+    </form>
+</body>
+</html>
