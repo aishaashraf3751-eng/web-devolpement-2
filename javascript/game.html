@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>My Game Profile</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: aliceblue;
+
+text-align: center;
+
+padding: 30px;
+
+}
+
+h1 { color: navy; }
+
+button {
+
+background: navy;
+
+color: white;
+
+padding: 10px 25px;
+
+border: none;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+}
+
+div {
+
+border: 1px solid navy;
+
+width: 280px;
+
+margin: 6px auto;
+
+padding: 8px 12px;
+
+text-align: left;
+
+border-radius: 6px;
+
+}
+
+</style>
+
+</head>
+
+<body>  
+
+    <h1>MY GAME PROFILE</h1>
+    <button onclick="displayProfile()">Display Profile</button>
+
+    <DIV>Name: <span id="name"></span></DIV>
+    <div>Score: <span id="score"></span></div>
+    <div>TOP SCORE: <span id="record"></span></div>
+    <div>RANK: <span id="rank"></span></div>
+    <div>greeting: <span id="greeting"></span></div>
+    <div>star: <span id="stars"></span></div>
+    <div>BONUS LEVEL: <span id="bonus"></span></div>
+    <div>TEAM NAME: <span id="team"></span></div>
+
+    <script>
+
+        function displayProfile() {
+            let name = "alex";
+            let myscore = 1500;
+            let highscore = 2000;
+            let bonus   =null;
+            let team;
+        
+
+        let isTopScore = myscore == highscore;
+
+        let rank;
+        if (myscore >= 2000) {
+            rank = "GOLD";
+        } else if (myscore >= 1500) {
+            rank = "SILVER";
+        } else {
+            rank = "BRONZE";
+        }
+
+
+        let hour = new Date().getHours();
+        let greeting;
+        if (hour < 12) {
+            greeting = "Good Morning";
+        } else if (hour < 18) {
+            greeting = "Good Afternoon";
+        } else {
+            greeting = "Good Evening";
+        }
+
+        let stars = "";
+        let count= 0;
+        while (count < 5) {
+            stars = "*";
+            count = count + 1;
+        }
+
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("score").innerHTML = myscore;
+        document.getElementById("record").innerHTML = highscore;
+        document.getElementById("rank").innerHTML = rank;
+        document.getElementById("greeting").innerHTML = greeting;
+        document.getElementById("stars").innerHTML = stars;
+        document.getElementById("bonus").innerHTML = bonus;
+        document.getElementById("team").innerHTML = team;
+    }22
+
+    </script>
+</body>
+</html>
