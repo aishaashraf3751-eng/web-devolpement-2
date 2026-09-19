@@ -65,8 +65,8 @@
   <h1>My Digital Zoo Manager</h1>
 
   <p>
-    Use JavaScript and the DOM to explore animals, zones, parent nodes,
-    child nodes, and sibling nodes.
+    Use JavaScript 
+   .
   </p>
 
   <div id="zoo">
@@ -97,27 +97,26 @@
   <script>
     function manageZoo() {
 
-      // HTML DOM: Selecting elements from the webpage
+     
       let zoo = document.getElementById("zoo");
       let lionZone = document.getElementById("lionZone");
       let elephantZone = document.getElementById("elephantZone");
       let pandaZone = document.getElementById("pandaZone");
       let output = document.getElementById("output");
 
-      // The DOM Tree: zoo is the parent container of all animal zones
+      
       let parentNodeName = lionZone.parentNode.id;
 
-      // Parent, Child, and Sibling Nodes
+     
       let firstChildZone = zoo.children[0].id;
       let secondChildZone = zoo.children[1].id;
       let nextSiblingZone = lionZone.nextElementSibling.id;
       let previousSiblingZone = pandaZone.previousElementSibling.id;
 
-      // Types of Nodes
       let elementNodeType = lionZone.nodeType;
       let textNodeType = lionZone.firstChild.nodeType;
 
-      // JavaScript and the DOM: Changing content and style
+     
       lionZone.style.backgroundColor = "#fff3cd";
       elephantZone.style.backgroundColor = "#d1ecf1";
       pandaZone.style.backgroundColor = "#f8d7da";
