@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: aliceblue;
+
+text-align: center;
+
+padding: 50px;
+
+}
+
+h1 { color: navy; }
+
+button {
+
+background: navy;
+
+color: white;
+
+padding: 10px 25px;
+
+border: none;
+
+border-radius: 20px;
+
+cursor: pointer;
+
+}
+
+div {
+
+border: 1px solid navy;
+
+width: 380px;
+
+margin: 20px auto;
+
+padding: 8px 12px;
+
+text-align: center;
+
+border-radius: 10px;
+
+}
+
+
+
+</style>
+</head>
+<body>
+    
+  <div class="birthday-card">
+
+
+    <div class="emoji">Birthday Time</div>
+
+
+    <h1>My Birthday Countdown Checker</h1>
+
+
+    <p>
+      Click the button to check how many days are left for the birthday celebration.
+    </p>
+
+
+    <button onclick="checkBirthday()">Check Birthday Countdown</button>
+
+
+    <h2>Days Left</h2>
+    <div id="daysBox">?</div>
+
+
+    <div class="info-box">
+      <h2>Birthday Result</h2>
+      <p id="result"></p>
+    </div>
+
+
+    <div class="info-box">
+      <h2>Countdown Review</h2>
+      <p id="countdown"></p>
+    </div>
+
+
+  </div>
+  <script>
+    
+    function checkBirthday() {
+        let today = new Date();
+        let birthday = new Date(today.getFullYear(), 9, 25); // October 25th
+        if (today > birthday) {
+            birthday.setFullYear(today.getFullYear() + 1);
+        }
+        let timeDiff = birthday - today;
+        let daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        document.getElementById("daysBox").innerText = daysLeft;
+        document.getElementById("result").innerText = "Your birthday is in " + daysLeft + " days!";
+        document.getElementById("countdown").innerText = "Countdown: " + daysLeft + " days left until your birthday.";
+    }
+  </script>
+
+
+    
+</body>
+</html>
