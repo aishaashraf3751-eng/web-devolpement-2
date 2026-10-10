@@ -1,0 +1,27 @@
+body{
+    margin:0;
+    font-family:"baloo tamma 2", cursive;
+    background-color: #f5f5f5;
+}
+
+.navigation {
+    background: #222;
+    BORDER-TOP: 1px solid #444;
+    padding: 12px 40px !important;
+}
+
+.brand-logo {
+    height:26px;
+    width:auto;
+}
+
+.navigation-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+.navigation-link:hover {
+    color: #f5f5f5;
+    text-decoration: underline;
+}
